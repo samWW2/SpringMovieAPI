@@ -5,7 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
+
 
 @Service
 public class MovieService {
@@ -14,6 +14,7 @@ public class MovieService {
     private MovieRepository repository;
 
     public List<Movie> allMovies() {
+        System.out.println(repository.findAll().toString());
         return repository.findAll();
     }
 }
